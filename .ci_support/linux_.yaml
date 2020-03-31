@@ -19,7 +19,7 @@ fftw:
 libcurl:
 - '7.64'
 libnetcdf:
-- 4.7.3
+- 4.7.4
 pin_run_as_build:
   boost:
     max_pin: x.x.x
