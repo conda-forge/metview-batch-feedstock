@@ -7,10 +7,10 @@ Subject: [PATCH] Pass-CPP-to-rpcgen
  src/CMakeLists.txt | 7 +++++++
  1 file changed, 7 insertions(+)
 
-diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+diff --git mars-client/src/CMakeLists.txt b/src/CMakeLists.txt
 index e3e4624..eeb934e 100644
---- a/src/CMakeLists.txt
-+++ b/src/CMakeLists.txt
+--- mars-client/src/CMakeLists.txt
++++ mars-client/src/CMakeLists.txt
 @@ -205,6 +205,13 @@ if(MARS_CLIENT_HAVE_RPC)
      ecbuild_critical("Could not find rpcgen. Please provide RPCGEN_PATH.")
    endif()
