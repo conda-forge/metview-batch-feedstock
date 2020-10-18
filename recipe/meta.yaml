@@ -25,8 +25,8 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - libcurl
-    - eccodes >=2.18.0
-    - magics-metview-batch >=4.4.0
+    - eccodes >=2.19.0
+    - magics-metview-batch >=4.5.0
     - boost
     - flex
     - bison
@@ -37,8 +37,8 @@ requirements:
     - _openmp_mutex  # [linux]
   run:
     - libcurl
-    - eccodes >=2.18.0
-    - magics-metview-batch
+    - eccodes >=2.19.0
+    - magics-metview-batch >=4.5.0
     - flex
     - bison
     - libnetcdf
