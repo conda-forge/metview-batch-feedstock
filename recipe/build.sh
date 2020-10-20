@@ -59,6 +59,7 @@ cmake -D CMAKE_INSTALL_PREFIX=$PREFIX \
       -D ENABLE_ECKIT_CMD=OFF \
       -D ENABLE_BZIP2=OFF \
       -D ENABLE_MPI=OFF \
+      -D INSTALL_LIB_DIR=lib \
       $RPCGEN_PATH_FLAGS \
       $SRC_DIR
 
