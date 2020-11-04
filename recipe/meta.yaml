@@ -35,6 +35,7 @@ requirements:
     - gdbm
     - fftw
     - _openmp_mutex  # [linux]
+    - openlibm  # [osx]
   run:
     - libcurl
     - eccodes >=2.19.0
@@ -47,6 +48,7 @@ requirements:
     - fftw
     - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
+    - openlibm  # [osx]
   run_constrained:
     # metview-batch is incompatible with metview
     - metview ==9999999999
