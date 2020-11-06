@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://confluence.ecmwf.int/download/attachments/83394695/{{ name }}-{{ version }}-Source.tar.gz
+  url: https://confluence.ecmwf.int/download/attachments/30048389/{{ name }}-{{ version }}-Source.tar.gz
   sha256: e323a1ab39ecf5a619acc6f0b8986b9f0ed6e1a024b23383a64f02f6b631379b
   patches:
     - 0001-Use-find_package-instead-of-find_library-for-threads.patch
