@@ -11,9 +11,10 @@ source:
   patches:
     - 0001-Use-find_package-instead-of-find_library-for-threads.patch
     - 0002-Pass-CPP-to-rpcgen.patch
+    - 0003-improve-performance-of-fieldset-lookup-function.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
@@ -35,6 +36,7 @@ requirements:
     - gdbm
     - fftw
     - _openmp_mutex  # [linux]
+    - openlibm  # [osx]
   run:
     - libcurl
     - eccodes >=2.19.0
@@ -47,6 +49,7 @@ requirements:
     - fftw
     - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
+    - openlibm  # [osx]
   run_constrained:
     # metview-batch is incompatible with metview
     - metview ==9999999999
@@ -54,8 +57,8 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/lib/metview-bundle/lib/libMvMacro${SHLIB_EXT}
-    - test -f $PREFIX/lib/metview-bundle/bin/metview_bin/uPlotBatch
-    - test -f $PREFIX/lib/metview-bundle/bin/metview_bin/XSection
+    - test -f $PREFIX/lib/metview-bundle/bin/uPlotBatch
+    - test -f $PREFIX/lib/metview-bundle/bin/XSection
     - test -f $PREFIX/bin/metview
 
 about:
