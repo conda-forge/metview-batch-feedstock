@@ -14,7 +14,7 @@ source:
     - 0003-improve-performance-of-fieldset-lookup-function.patch
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win]
   detect_binary_files_with_prefix: true
 
@@ -27,12 +27,10 @@ requirements:
   host:
     - libcurl
     - eccodes >=2.19.0
-    - magics-metview-batch >=4.5.0
-    - boost
+    - magics-metview-batch >=4.5.1
     - flex
     - bison
     - libnetcdf
-    - proj
     - gdbm
     - fftw
     - _openmp_mutex  # [linux]
@@ -44,7 +42,6 @@ requirements:
     - flex
     - bison
     - libnetcdf
-    - proj
     - gdbm
     - fftw
     - llvm-openmp  # [osx]
