@@ -46,6 +46,7 @@ requirements:
     - llvm-openmp  # [osx]
     - _openmp_mutex  # [linux]
     - openlibm  # [osx]
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
   run_constrained:
     # metview-batch is incompatible with metview
     - metview ==9999999999
