@@ -28,6 +28,7 @@ requirements:
     - eccodes >=2.22.0
     - magics-metview-batch >=4.8.0
     - flex
+    - glib
     - bison
     - libnetcdf
     - gdbm
