@@ -50,6 +50,11 @@ else
     RPCGEN_USE_CPP_ENV=0
 fi
 
+echo "testing bison"
+$PREFIX/bin/bison --version
+
+
+
 cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
       -D CMAKE_BUILD_TYPE=Release \
       -D ENABLE_ECKIT_CMD=OFF \
