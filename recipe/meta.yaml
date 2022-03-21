@@ -23,6 +23,7 @@ requirements:
   build:
     - cmake
     - make
+    - python
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
