@@ -50,11 +50,18 @@ else
     RPCGEN_USE_CPP_ENV=0
 fi
 
-which curl
-file `which curl`
 
-which wget
-file `which wget`
+# for osx-arm64 to avoid using the arm64 version, which will not run on the build machine
+# because it's cross-compiling
+echo "${CONDA_BUILD_CROSS_COMPILATION:-}"
+echo "${CROSSCOMPILING_EMULATOR}"
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "${CROSSCOMPILING_EMULATOR}" == "" ]]; then
+export PATH=/usr/local/opt/curl/bin/$PATH
+ls -l /usr/local/opt/curl/bin/
+fi
+
+which curl
+#file `which curl`
 
 
 
