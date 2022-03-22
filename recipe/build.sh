@@ -50,13 +50,6 @@ else
     RPCGEN_USE_CPP_ENV=0
 fi
 
-echo "testing bison"
-file $PREFIX/bin/bison
-
-file `which cmake`
-
-$PREFIX/bin/bison --version
-
 
 
 cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
