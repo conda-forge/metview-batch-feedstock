@@ -56,8 +56,10 @@ fi
 echo "${CONDA_BUILD_CROSS_COMPILATION:-}"
 echo "${CROSSCOMPILING_EMULATOR}"
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "${CROSSCOMPILING_EMULATOR}" == "" ]]; then
-export PATH=/usr/local/opt/curl/bin/$PATH
-ls -l /usr/local/opt/curl/bin/
+#export PATH=/usr/local/opt/curl/bin/$PATH
+export FIND_PROG_FLAGS="-DCMAKE_PROGRAM_PATH=/usr/bin"
+else
+export FIND_PROG_FLAGS=""
 fi
 
 which curl
@@ -83,6 +85,7 @@ cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
       -D INSTALL_LIB_DIR=lib \
       -D METVIEW_INSTALL_EXE_BIN_DIR=bin \
       $RPCGEN_PATH_FLAGS \
+      $FIND_PROG_FLAGS \
       $SRC_DIR
 
 make -j $CPU_COUNT VERBOSE=1
