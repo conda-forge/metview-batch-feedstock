@@ -52,6 +52,9 @@ fi
 
 echo "testing bison"
 file $PREFIX/bin/bison
+
+file `which cmake`
+
 $PREFIX/bin/bison --version
 
 
