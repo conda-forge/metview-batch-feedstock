@@ -51,6 +51,7 @@ else
 fi
 
 echo "testing bison"
+file $PREFIX/bin/bison
 $PREFIX/bin/bison --version
 
 
