@@ -21,7 +21,9 @@ build:
 
 requirements:
   build:
+    - bison
     - cmake
+    - flex
     - make
     - python
     - {{ compiler('c') }}
@@ -30,9 +32,7 @@ requirements:
     - libcurl
     - eccodes >=2.22.0
     - magics-metview-batch >=4.10.0
-    - flex
     - glib
-    - bison
     - libnetcdf
     - gdbm
     - fftw
@@ -42,8 +42,6 @@ requirements:
     - libcurl
     - eccodes >=2.22.0
     - magics-metview-batch >=4.10.0
-    - flex
-    - bison
     - libnetcdf
     - gdbm
     - fftw
