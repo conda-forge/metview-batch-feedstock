@@ -50,6 +50,12 @@ else
     RPCGEN_USE_CPP_ENV=0
 fi
 
+which curl
+file `which curl`
+
+which wget
+file `which wget`
+
 
 
 cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
