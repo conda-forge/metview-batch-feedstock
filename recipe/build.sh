@@ -58,8 +58,10 @@ echo "${CROSSCOMPILING_EMULATOR}"
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "${CROSSCOMPILING_EMULATOR}" == "" ]]; then
 #export PATH=/usr/local/opt/curl/bin/$PATH
 export FIND_PROG_FLAGS="-DCMAKE_PROGRAM_PATH=/usr/bin"
+export STATION_DB_FLAGS="-DENABLE_STATIONS_DB=OFF"
 else
 export FIND_PROG_FLAGS=""
+export STATION_DB_FLAGS=""
 fi
 
 which curl
@@ -86,6 +88,7 @@ cmake ${CMAKE_ARGS} -D CMAKE_INSTALL_PREFIX=$PREFIX \
       -D METVIEW_INSTALL_EXE_BIN_DIR=bin \
       $RPCGEN_PATH_FLAGS \
       $FIND_PROG_FLAGS \
+      $STATION_DB_FLAGS \
       $SRC_DIR
 
 make -j $CPU_COUNT VERBOSE=1
