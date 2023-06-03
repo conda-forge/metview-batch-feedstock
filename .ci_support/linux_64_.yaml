@@ -21,7 +21,7 @@ glib:
 libcurl:
 - '8'
 libnetcdf:
-- 4.9.1
+- 4.9.2
 target_platform:
 - linux-64
 zip_keys:
