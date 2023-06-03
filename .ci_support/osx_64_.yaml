@@ -21,7 +21,7 @@ glib:
 libcurl:
 - '8'
 libnetcdf:
-- 4.9.1
+- 4.9.2
 llvm_openmp:
 - '15'
 macos_machine:
