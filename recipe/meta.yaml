@@ -31,7 +31,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - libcurl
-    - eccodes >=2.22.0
+    - eccodes >=2.32.0
     - magics-metview-batch >=4.12.0
     - glib
     - libnetcdf
@@ -41,7 +41,7 @@ requirements:
     - openlibm  # [osx]
   run:
     - libcurl
-    - eccodes >=2.22.0
+    - eccodes >=2.32.0
     - magics-metview-batch >=4.12.0
     - libnetcdf
     - gdbm
