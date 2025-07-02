@@ -15,6 +15,7 @@ source:
     - 0001-Use-find_package-instead-of-find_library-for-threads.patch
     - 0002-Pass-CPP-to-rpcgen.patch
     - 0003-eckit-geo-include-algorithm-header.patch
+    - 0004-eckit-geo-include-memory-header.patch
 
 build:
   number: 0
