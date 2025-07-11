@@ -34,6 +34,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - libcurl
+    - shapelib
     - eccodes >=2.32.0
     - magics-metview-batch >=4.12.0
     - glib
