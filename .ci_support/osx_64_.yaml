@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '17'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,7 +17,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '17'
+- '19'
 fftw:
 - '3'
 glib:
@@ -25,9 +25,9 @@ glib:
 libcurl:
 - '8'
 libnetcdf:
-- 4.9.2
+- 4.9.3
 llvm_openmp:
-- '17'
+- '19'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:
