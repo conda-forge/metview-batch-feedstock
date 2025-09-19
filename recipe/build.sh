@@ -3,6 +3,10 @@
 set -e
 set -x
 
+env | sort
+ls -l /usr/bin
+ls -l $BUILD_PREFIX/bin
+
 if [[ "$c_compiler" == "gcc" ]]; then
   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
 fi
@@ -27,7 +31,7 @@ if [[ $(uname) == Linux ]]; then
     ln -s "$CPP" ./cpp
     export CPP="$PWD/cpp"
     RPCGEN_USE_CPP_ENV=1
-    RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin"
+    RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin;$BUILD_PREFIX/bin"
 else
     RPCGEN_USE_CPP_ENV=0
 fi
