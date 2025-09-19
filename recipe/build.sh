@@ -49,6 +49,8 @@ RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin"
 ln -s "$CPP_FOR_BUILD" ./cpp
 export CPP="$PWD/cpp"
 RPCGEN_USE_CPP_ENV=1
+file /usr/bin/rpcgen
+find / -name rpcgen
 else
 export FIND_PROG_FLAGS=""
 export STATION_DB_FLAGS=""
