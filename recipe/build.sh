@@ -51,6 +51,8 @@ export CPP="$PWD/cpp"
 RPCGEN_USE_CPP_ENV=1
 #file /usr/bin/rpcgen
 #find / -name rpcgen
+export xcrun_log=1
+export xcrun_verbose=1
 else
 export FIND_PROG_FLAGS=""
 export STATION_DB_FLAGS=""
