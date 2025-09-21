@@ -45,7 +45,11 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "${CROSSCOMPILING_EMULATOR}
 #export PATH=/usr/local/opt/curl/bin/$PATH
 export FIND_PROG_FLAGS="-DCMAKE_PROGRAM_PATH=$BUILD_PREFIX/bin;/usr/bin"
 export STATION_DB_FLAGS="-DENABLE_STATIONS_DB=OFF"
-RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin"
+export XCODE_DEVELOPER_USR_PATH=/System/Volumes/Data/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/
+export PATH="${PATH}:${XCODE_DEVELOPER_USR_PATH}/bin"
+#RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin"
+RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=${XCODE_DEVELOPER_USR_PATH}/bin"
+file ${XCODE_DEVELOPER_USR_PATH}/bin/rpcgen
 ln -s "$CPP_FOR_BUILD" ./cpp
 export CPP="$PWD/cpp"
 RPCGEN_USE_CPP_ENV=1
@@ -53,8 +57,6 @@ RPCGEN_USE_CPP_ENV=1
 #find / -name rpcgen
 export xcrun_log=1
 export xcrun_verbose=1
-export XCODE_DEVELOPER_USR_PATH=/System/Volumes/Data/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/
-export PATH="${PATH}:${XCODE_DEVELOPER_USR_PATH}/bin"
 else
 export FIND_PROG_FLAGS=""
 export STATION_DB_FLAGS=""
