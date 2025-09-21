@@ -46,7 +46,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" && "${CROSSCOMPILING_EMULATOR}
 export FIND_PROG_FLAGS="-DCMAKE_PROGRAM_PATH=$BUILD_PREFIX/bin;/usr/bin"
 export STATION_DB_FLAGS="-DENABLE_STATIONS_DB=OFF"
 # whole bunch of horrible stuff for rpcgen needed after updates to the build environment around summer of 2025
-export XCODE_DEVELOPER_USR_PATH=${OSX_SDK_DIR}/../../../../Toolchains/XcodeDefault.xctoolchain/usr/
+export XCODE_DEVELOPER_USR_PATH=${CONDA_BUILD_SYSROOT}/../../../../../Toolchains/XcodeDefault.xctoolchain/usr/
 #export XCODE_DEVELOPER_USR_PATH=/System/Volumes/Data/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/
 export PATH="${PATH}:${XCODE_DEVELOPER_USR_PATH}/bin"
 #RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=/usr/bin"
