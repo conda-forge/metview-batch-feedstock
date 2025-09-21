@@ -54,6 +54,7 @@ RPCGEN_USE_CPP_ENV=1
 export xcrun_log=1
 export xcrun_verbose=1
 export XCODE_DEVELOPER_USR_PATH=/System/Volumes/Data/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/
+export PATH="${PATH}:${XCODE_DEVELOPER_USR_PATH}/bin"
 else
 export FIND_PROG_FLAGS=""
 export STATION_DB_FLAGS=""
