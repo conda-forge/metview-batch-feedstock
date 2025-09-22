@@ -50,6 +50,9 @@ export XCODE_DEVELOPER_USR_PATH=${CONDA_BUILD_SYSROOT}/../../../../../Toolchains
 export PATH="${PATH}:${XCODE_DEVELOPER_USR_PATH}/bin"
 RPCGEN_PATH_FLAGS="-DRPCGEN_PATH=${XCODE_DEVELOPER_USR_PATH}/bin"
 file ${XCODE_DEVELOPER_USR_PATH}/bin/rpcgen
+ln -s "$CPP_FOR_BUILD" ./cpp
+export CPP="$PWD/cpp"
+RPCGEN_USE_CPP_ENV=1
 export xcrun_log=1
 export xcrun_verbose=1
 else
